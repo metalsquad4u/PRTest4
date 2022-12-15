@@ -1,20 +1,19 @@
 on:
   push:
     branches:
-    - dev
+    - main
 
 jobs:
   updateAuthor:
     runs-on: ubuntu-latest
     steps:
     - name: checking out code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Raise pull-request
       uses: peter-evans/create-pull-request@v3
       with:
         branch: "auto-pr-branch"
-        base: main        
         title: "Requesting Pull Request"
         committer: Abdul <noreply@github.com>
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
