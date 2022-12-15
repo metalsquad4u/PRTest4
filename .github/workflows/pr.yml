@@ -19,6 +19,6 @@ jobs:
         committer: Abdul <noreply@github.com>
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         body: "I want to merge from feature branch to main"
-        token: token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         delete-branch: true
         reviewers: "YAbdul" 
