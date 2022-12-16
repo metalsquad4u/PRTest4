@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - main
+    - dev
 
 jobs:
   updateAuthor:
@@ -9,11 +9,17 @@ jobs:
     steps:
     - name: checking out code
       uses: actions/checkout@v3
+        with:
+          ref: main
 
     - name: Raise pull-request
+      run: |
+        git fetch origin dev:dev
+        git reset --hard dev
+
       uses: peter-evans/create-pull-request@v3
       with:
-        branch: "auto-pr-branch"
+        branch: dev-to-main
         title: "Requesting Pull Request"
         committer: Abdul <noreply@github.com>
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
