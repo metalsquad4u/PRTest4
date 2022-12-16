@@ -9,8 +9,8 @@ jobs:
     steps:
     - name: checking out code
       uses: actions/checkout@v3
-        with:
-          ref: main
+      with:
+        ref: main
 
     - name: Raise pull-request
       run: |
