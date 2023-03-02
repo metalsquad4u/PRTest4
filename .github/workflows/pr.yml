@@ -17,6 +17,9 @@ jobs:
       run: |
         git fetch origin dev:dev
         git reset --hard dev
+        
+    - name: Install AWS CDK 2
+      run: 'echo "Workflow in Dev Branch."'
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
