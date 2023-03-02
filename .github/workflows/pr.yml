@@ -1,9 +1,8 @@
 on:
-  on:
   #push:
     #branches:
     #- dev
-     workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   updateAuthor:
