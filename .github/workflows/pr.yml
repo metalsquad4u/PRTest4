@@ -1,7 +1,8 @@
 on:
-  push:
-    branches:
-    - dev
+  #push:
+    #branches:
+    #- dev
+     workflow_dispatch:
 
 jobs:
   updateAuthor:
@@ -28,3 +29,4 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         delete-branch: true
         reviewers: "YAbdul" 
+        #Commenting Test
